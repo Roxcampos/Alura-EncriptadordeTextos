@@ -4,45 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/candado.png"></i>
     <title>Encriptador de Textos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-
+  <!--Encabezado-->
+    <header class="header">
+      <div class="logo-header">
+          <a href="index.html" rel="">
+            <img src="img/logo.svg" alt="Logo Alura" class="logo">
+          </a>
+      </div>
+      <div class="titulo">
+        <h1>ENCRIPTADOR DE TEXOS</h1>
+      </div>
+      
     </header>
 
     <main>
-        <div class="contenedor">
-            <div class="encriptador">
-                <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresar el texto"></textarea>
+        <div class="container">
+            <div class="encriptar">
+              
+              <textarea
+                name="texto"
+                class="texto"
+                id="texto"
+                cols="30"
+                rows="10"
+                placeholder="Ingresa el texto aquí"
+                
+              ></textarea>
+         
+                <img src="img/aviso.svg" alt="Imagen Aviso" class="img-aviso">
+                <p>Solo letras minúsculas y sin acentos.</p>
+              </div>
+              <div class="botones">
+                <!--
+                <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>-->
+                <input type="button" class="btn-encriptar" value="Encriptar!" onclick="encriptar()"/>
+               
+                <input type="button" class="btn-desencriptar" value="Desencriptar!" onclick="desencriptar()"/>
 
+              </div>
+
+          
+            <div class="encriptado">
+              <img src="img/persona-lupa.jpg" alt="" id="persona" class="persona"/>
+              <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">Ingresar el texto que deseas encriptar o desencriptar</p>
+              </div>
             
-                <div class="terminos" >
-                <p>Solo letras minúculas y sin acéntos</p>
-                </div>
-                <div class="botones">
-                <input type="text" class="btn-encriptar" value="Encriptar" onclick="encriptar()"/> 
-                <input type="text" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()"/> 
-                </div>
             </div>
-            <div class="texto-encriptado">
-                    <img src="" alt="" id="persona">
-                    <div class="mensaje-emcriptado" id="mensaje-encriptado">
-                    <h2 id="titulo-mensaje">Ningun mensaje disponible</h2>
-                    <p id="parrafo">Ingresar el texto para encriptar o desencriptar</p>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
-                </div>
-
-            </div>
+           
+          </div>
         </div>
     </main>
 
     <footer>
+     
+      <p class="copyright">&copy Copyright RoxCampos - 2024</p>
+      <a href="#" rel="">
+        <img src="img/linkedin.svg" alt="Logo Linkedin" class="linkedin">
+      </a>
+      <a href="#" rel="">
+        <img src="img/github.svg" alt="Logo GitHub" class="git">
+      </a>
 
     </footer>
 
 </body>
-<script src="index.js"></script>
+<script src="encriptador.js"></script>
 </html>
