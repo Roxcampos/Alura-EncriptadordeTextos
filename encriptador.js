@@ -1,3 +1,5 @@
+
+
 function encriptar() {
     let texto = document.getElementById("texto").value;
     let tituloMensaje = document.getElementById("titulo-mensaje");
@@ -50,17 +52,15 @@ function encriptar() {
       }
   }
 
-  function copiarTexto() {
-   let contenido = document.getElementById("texto").value;
-    navigator.clipboard.writeText(contenido)
-        .then(() => {
-            alert("Texto copiado!");
-        })
-        .catch(err => {
-            console.error("Error al copiar el texto:", err);
-        });
-}
 
-function borrarTexto() {
-    document.getElementById("texto").value = " ";
+const elemento= document.querySelector('.texto');
+
+document.querySelector('#btn-copiar').addEventListener('click',()=>{
+  copiar(elemento);
+})
+function copiar(elemento){
+  const inputOculto = document.createElement('input');
+  inputOculto.setAttribute('value', elemento.value);
+  console.log(inputOculto);
 }
+  

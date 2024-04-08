@@ -39,6 +39,17 @@
    height: 100vh;
    background: #f3f5fc;
  }
+ .contenedor-btn{
+  display: flex;
+   flex-direction: row;
+   align-items: right;
+   padding: 0px;
+   gap: 8px;
+   position: absolute;
+   width: 80%;
+   left: 51%;
+   top: 12%;
+ }
 
  .texto {
    position: absolute;
